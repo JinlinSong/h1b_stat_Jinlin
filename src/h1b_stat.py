@@ -127,29 +127,27 @@ def main(input_path, top_10_occupations_path, top_10_states_path):
     status_column_name = 'CASE_STATUS'
 
     ### Process H1B CSV dataset in csv file, getting related columns of certified H1B data
-    H1B_CSV_dataset = H1B_CSV_dataset(input_path, sep = ';')
-    data_header = H1B_CSV_dataset.data_header()
-	data_set = H1B_CSV_dataset.data_set()
-	H1B_dataset_certified = extract_related_columns(data_set, data_header, state_column_name,occupation_column_name, status_column_name)
-
-	### Process certified H1B data to get top_10_occupations and top_10_states
-	H1B_stat = H1B_stat(H1B_dataset_certified)
-	state_stat = H1B_stat.state_stat()
-	occupation_stat = H1B_stat.occupation_stat()
-
-	### Write data to top_10_occupations, and top_10_states file
-	write_data(state_stat, top_10_states_path, data_type = 'TOP_STATES')
-	write_data(occupation_stat, top_10_occupations_path, data_type = 'TOP_OCCUPATIONS')
+    H1B_CSV_dataset_var = H1B_CSV_dataset(input_path, sep = ';')
+    data_header = H1B_CSV_dataset_var.data_header()
+    data_set = H1B_CSV_dataset_var.data_set()
+    H1B_dataset_certified = extract_related_columns(data_set, data_header, state_column_name,occupation_column_name, status_column_name)
+    ### Process certified H1B data to get top_10_occupations and top_10_states
+    H1B_stat_var = H1B_stat(H1B_dataset_certified)
+    state_stat = H1B_stat_var.state_stat()
+    occupation_stat = H1B_stat_var.occupation_stat()
+    
+    ### Write data to top_10_occupations, and top_10_states file
+    write_data(state_stat, top_10_states_path, data_type = 'TOP_STATES')
+    write_data(occupation_stat, top_10_occupations_path, data_type = 'TOP_OCCUPATIONS')
     return True
 
 if __name__ == '__main__':
     ### get input path and out_put path
     if len(sys.argv) != 4:
         print('Please specify Four parameters: h1b_counting.py, input path, top_10_occupations path and top_10_states path!')
-        return False
     else:
         input_path = sys.argv[1]
         top_10_occupations_path = sys.argv[2]
         top_10_states_path = sys.argv[3]
-    main(input_path, top_10_occupations_path, top_10_states_path)
+        main(input_path, top_10_occupations_path, top_10_states_path)
 

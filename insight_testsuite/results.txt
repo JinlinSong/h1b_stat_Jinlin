@@ -1,9 +1,0 @@
-[Sun Nov 11 12:59:56 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:01:14 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:03:13 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:04:12 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:04:23 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:06:14 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:08:38 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:11:47 PST 2018] 0 of 1 tests passed
-[Sun Nov 11 13:12:14 PST 2018] 0 of 1 tests passed

@@ -9,11 +9,11 @@ class H1B_CSV_dataset:
         self.value = True
         self.data_input = []
         try:
-            with open(data_file,'r',encoding="utf-8") as f:
+            with open(data_file,'r') as f:
                 for row in f:
                     self.data_input.append(row.strip('\n').split(sep))
         except:
-            print('Error: Not able to load data from given input file.')
+            print('Error: Not able to load data from given input file!')
             self.value = False
             sys.exit()
             

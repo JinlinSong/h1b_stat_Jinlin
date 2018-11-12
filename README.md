@@ -19,10 +19,10 @@ If the newspaper gets data for the year 2019 (with the assumption that the neces
 ## Approach
 
 Raw data could be found [here](https://www.foreignlaborcert.doleta.gov/performancedata.cfm) under the __Disclosure Data__ tab (i.e., files listed in the __Disclosure File__ column with ".xlsx" extension).
-### For given year data, we convert ".xlsx" into ".csv";
-### Based on dataset header, we extracted related columns, including "case status", "working states", and "occupations", and remove records which are not certified;
-### Based on "working states", we calculate the number of applications, getting the top 10 states with certified visa applications
-### Based on "woccupations", we calculate the number of applications, getting the top 10 occupations with certified visa applications
+1. For given year data, we convert ".xlsx" into ".csv";
+2. Based on dataset header, we extracted related columns, including "case status", "working states", and "occupations", and remove records which are not certified;
+3. Based on "working states", we calculate the number of applications, getting the top 10 states with certified visa applications
+4. Based on "woccupations", we calculate the number of applications, getting the top 10 occupations with certified visa applications
 
 
 ## Output 

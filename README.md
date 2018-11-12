@@ -1,6 +1,6 @@
 # InsightDataScience/h1b_statistics
 
-Original problem introductions: https://github.com/InsightDataScience/h1b_statistics
+[Original problem introductions](https://github.com/InsightDataScience/h1b_statistics)
 
 ## Table of Contents
 1. [Problem]
@@ -22,7 +22,7 @@ Raw data could be found [here](https://www.foreignlaborcert.doleta.gov/performan
 1. For given year data, we convert ".xlsx" into ".csv";
 2. Based on dataset header, we extracted related columns, including "case status", "working states", and "occupations", and remove records which are not certified;
 3. Based on "working states", we calculate the number of applications, getting the top 10 states with certified visa applications
-4. Based on "woccupations", we calculate the number of applications, getting the top 10 occupations with certified visa applications
+4. Based on "occupations", we calculate the number of applications, getting the top 10 occupations with certified visa applications
 
 
 ## Output 

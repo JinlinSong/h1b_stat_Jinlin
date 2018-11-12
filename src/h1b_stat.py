@@ -127,7 +127,7 @@ def main(input_path, top_10_occupations_path, top_10_states_path):
     status_column_name = 'CASE_STATUS'
 
     ### Process H1B CSV dataset in csv file, getting related columns of certified H1B data
-    H1B_CSV_dataset_var = H1B_CSV_dataset(input_path, sep = ';')
+    H1B_CSV_dataset_var = H1B_CSV_dataset(data_file = input_path, sep = ';')
     data_header = H1B_CSV_dataset_var.data_header()
     data_set = H1B_CSV_dataset_var.data_set()
     H1B_dataset_certified = extract_related_columns(data_set, data_header, state_column_name,occupation_column_name, status_column_name)
@@ -146,8 +146,8 @@ if __name__ == '__main__':
     if len(sys.argv) != 4:
         print('Please specify Four parameters: h1b_counting.py, input path, top_10_occupations path and top_10_states path!')
     else:
-        input_path = sys.argv[1]
-        top_10_occupations_path = sys.argv[2]
-        top_10_states_path = sys.argv[3]
-        main(input_path, top_10_occupations_path, top_10_states_path)
+        input_path_var = sys.argv[1]
+        top_10_occupations_path_var = sys.argv[2]
+        top_10_states_path_var = sys.argv[3]
+        main(input_path_var, top_10_occupations_path_var, top_10_states_path_var)
 

@@ -5,7 +5,9 @@
 ## Table of Contents
 1. [Problem]
 2. [Approach]
-3. [Output]
+3. [Running code]
+4. [Output]
+5. [Challenges]
 
 
 ## Problem
@@ -37,9 +39,13 @@ Place the input file as ./input/h1b_input.csv and run the run.sh script.
 ## Challenges
 
 1. The CSV header (column names) are different for different years, we should adjust parameters in h1b_stat.py under src folder state_column_name, occupation_column_name, status_column_name. If the certified application "status" is different with value 'CERTIFIED' for the new file, we should adjust certified_value as well; Before we run the run.sh, check file header, and check the certified application "status" value. For example year 2014, the parameters should be:
+
 status_column_name = STATUS
+
 state_column_name = LCA_CASE_WORKLOC1_STATE
+
 occupation_column_name = LCA_CASE_SOC_NAME
+
 certified_value = 'CERTIFIED'
 
 2. There are missing data or typo in the original file. We are supposed to clean the data before analysis, avoiding obvious error.
